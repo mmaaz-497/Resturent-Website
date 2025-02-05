@@ -19,6 +19,7 @@ export default function Home() {
         <OurChef/>
         <ClientSaying/>
         <Blog/>
+        
     </div>
   );
 }

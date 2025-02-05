@@ -1,53 +1,114 @@
-import React from 'react'
-import Image from 'next/image';
+import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
+
 const Footer = () => {
   return (
-    // <div>
-    //     <div className='w-[1923.73px] h-[740.15px] relative top-[px] '>
-    //         <div className='w-[1170px] h-[142.62px] top-[7759] left-[359px] '>
-    //             <div className='flex ml-[359px]'>
-    //                 <div className='mr-[150px]'>
-    //                     <p className='w-[439px] h-[40px]  top-[7759px] left-[359px] font-bold size-8 leading-10'>Still You Need Our Support</p>
-    //                     <p className='w-[458px] h-[24px]  top-[7816] left-[359px] font-normal size-4 leading-6'>Do not wait make a smart & logical quote here Its pretty easy</p>
-    //                 </div>
-    //                 <div className='w-[459px] h-[56px] top-[7759.15px] left-[1070px] ml-[px] bg-[#FF9F0D] pl-[20px] py-[15px]'>
-    //                     Enter Your Email
-    //                 </div>
-                    
-    //             </div>
-               
-    //         </div>
-    //                <div>
-    //                     <h5 className='w-[114px] h-[32px] ml-[300px] text-[24px] font-bold size-[24px] leading-8'>About Us.</h5>
-    //                     <p className='w-[312px] h-[95px] ml-[300px] mt-5 mb-5 font-normal size-[16px] leading-[24px]'>orporate clients and leisure travelers has been relying on Groundlink for dependab
-    //                     safe, and professional chauffeured car service in major cities across World</p>
-    //                 </div>
-    //                 <div className='w-[78px] h-[72px] ml-[300px] bg-[#FF9F0D] flex'>
-    //                     <Image src={'/images/Clock.png'} alt='photo' width={78} height={72} ></Image>
-    //                 </div>
-                        
-    //                 <div className='w-[149px] h-[74px] absolute top-[1260px] left-[394px]  '>
-    //                     <p className='w-[137.77px] h-[25.84px] font-normal size-[18px] leading-[26px]'>Opening Houres</p>
-    //                     <p className='w-[148.75px] h-[21.87px] font-normal size-[14px] leading-[22px] text-[15px]'>Mon - Sat(8.00 - 6.00)</p>
-    //                     <p className='w-[148.82px] h-[21.87px] font-normal size-[14px] leading-[22px] text-[15px]'>Sunday - Closed</p>
-    //                 </div>
-    //                     <div className='w-[143.41px] h-[367px] '>
-    //                     <h5 className='w-[143px] h-[32px] top-[7966px] left-[745.41px] text-[24px] font-bold size-[24px] leading-8'>Useful Links</h5>
-
-    //                     </div>
-                
-    //     </div>
-      
-    // </div>
-
-
-
-    <div>
-        <div id='footerPic' className='relative top-[900px] left-[200px]'>
-        <Image src={'/images/footerPic.png'} alt='photo' width={1923.73} height={740.15} ></Image> 
+    <footer className="bg-black text-white py-10 px-6 md:px-20 mt-[400px] md:mt-[900px]">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between border-b border-gray-700 pb-6">
+        <h2 className="text-xl md:text-2xl font-semibold">
+          <span className="text-[#FF9F0D]">Still</span> You Need Our Support?
+        </h2>
+        <p className="text-sm mt-2 md:mt-0">
+          Don’t wait! Make a smart & logical quote here. It’s pretty easy.
+        </p>
+        <div className="mt-4 md:mt-0">
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            className="px-4 py-2 rounded-l-md text-black outline-none"
+          />
+          <button className="bg-[#FF9F0D] px-4 py-2 rounded-r-md text-black font-semibold">
+            Subscribe Now
+          </button>
         </div>
-    </div>
-  );
-}
+      </div>
 
-export default Footer
+      {/* Main Footer Content */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-300 mt-8">
+        {/* About Us */}
+        <div>
+          <h3 className="text-lg font-semibold">About Us</h3>
+          <p className="text-sm mt-3">
+            Corporate clients and leisure travelers rely on Groundlink for
+            dependable, safe, and professional car services in major cities.
+          </p>
+          <div className="mt-4 flex items-center bg-[#FF9F0D] text-black p-3 rounded-md w-max">
+            <div className="text-2xl">🕒</div>
+            <div className="ml-2">
+              <p className="text-sm font-semibold">Opening Hours</p>
+              <p className="text-xs">Mon - Sat (8:00 - 6:00)</p>
+              <p className="text-xs">Sunday - Closed</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Useful Links */}
+        <div>
+          <h3 className="text-lg font-semibold">Useful Links</h3>
+          <ul className="mt-3 space-y-2">
+            {["About", "News", "Partners", "Team", "Menu", "Contacts"].map(
+              (link) => (
+                <li key={link} className="hover:text-[#FF9F0D] cursor-pointer">
+                  {link}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+
+        {/* Help Section */}
+        <div>
+          <h3 className="text-lg font-semibold">Help?</h3>
+          <ul className="mt-3 space-y-2">
+            {[
+              "FAQ",
+              "Term & Conditions",
+              "Reporting",
+              "Documentation",
+              "Support Policy",
+              "Privacy",
+            ].map((link) => (
+              <li key={link} className="hover:text-[#FF9F0D] cursor-pointer">
+                {link}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Recent Posts */}
+        <div>
+          <h3 className="text-lg font-semibold">Recent Post</h3>
+          <div className="mt-3 space-y-3">
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="flex items-center gap-3">
+                
+                <div>
+                  <p className="text-xs text-gray-400">20 Feb 2022</p>
+                  <p className="text-sm hover:text-[#FF9F0D] cursor-pointer">
+                    Keep Your Business
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between border-t border-gray-700 mt-8 pt-6">
+        <p className="text-gray-400 text-sm">
+          Copyright © 2022 by Ayeman. All Rights Reserved.
+        </p>
+        <div className="flex gap-4 mt-4 md:mt-0">
+          <FaFacebookF className="text-white hover:text-[#FF9F0D] cursor-pointer" />
+          <FaTwitter className="text-white hover:text-[#FF9F0D] cursor-pointer" />
+          <FaInstagram className="text-white hover:text-[#FF9F0D] cursor-pointer" />
+          <FaYoutube className="text-white hover:text-[#FF9F0D] cursor-pointer" />
+          <FaPinterest className="text-white hover:text-[#FF9F0D] cursor-pointer" />
+        </div>
+      </div>
+    </footer>
+  );
+};
+export default Footer;

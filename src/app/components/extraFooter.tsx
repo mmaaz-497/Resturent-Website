@@ -1,20 +1,32 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 
 const ExtraFooter = () => {
   return (
-    <div>
-        <div className='w-[1923px] h-[469] relative top-[-500px] left-[-1px]'>
-            <Image src={'/images/extraFooter.png'} alt='photo' width={1923} height={467} ></Image>
-        </div>
+    <div className="relative w-full flex flex-col items-center px-4">
+      {/* Extra Footer Image */}
+      <div className="w-full max-w-[1320px] mt-[100px]">
+        <Image 
+          src="/images/extraFooter.png" 
+          alt="Extra Footer" 
+          width={1320} 
+          height={467} 
+          className="w-full h-auto"
+        />
+      </div>
 
-        
-        <div className='absolute top-[3786px] left-[300px]'>
-        <Image src={'/images/ourMenu.png'} alt='photo' width={1320} height={656} ></Image>
-        </div>
-      
+      {/* Our Menu Image */}
+      <div className="w-full max-w-[1320px] mt-[100px] ">
+        <Image 
+          src="/images/ourMenu.png" 
+          alt="Our Menu" 
+          width={1320} 
+          height={656} 
+          className="w-full h-auto"
+        />
+      </div>
     </div>
   );
-}
+};
 
-export default ExtraFooter
+export default ExtraFooter;

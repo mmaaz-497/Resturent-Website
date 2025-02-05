@@ -9,7 +9,7 @@ import OurChef from "../components/ourChef";
 
 export default function page () {
     return(
-        <div>
+        <div  className="space-y-16">
             <Navebar/>
              <FoodQuality/>
              <FoodyProduct/>
@@ -18,7 +18,6 @@ export default function page () {
             <OurChef/>
             <ClientSaying/>
             <Blog/>
-
         </div>
     );
 }
